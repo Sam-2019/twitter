@@ -30,7 +30,8 @@ export const get_tweets = async () => {
 };
 
 export const retweet = async () => {
-  const data = await client.v2.retweet("12", "20");
+  const tweet_id = "20";
+  const data = await client.v2.retweet(USER_ID, tweet_id);
   console.log({ data });
 };
 
