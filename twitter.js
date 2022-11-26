@@ -25,8 +25,13 @@ export const send_tweet = async () => {
 };
 
 export const get_tweets = async () => {
-  const data = await client.v2.userTimeline(USER_ID, { exclude: "replies" });
-  console.log({ data });
+  const userTimeline = await client.v2.userTimeline(USER_ID, {
+    exclude: "replies",
+  });
+
+  for (const fetchedTweet of userTimeline) {
+    console.log({ fetchedTweet });
+  }
 };
 
 export const retweet = async () => {
