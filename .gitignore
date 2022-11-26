@@ -1,3 +1,6 @@
 node_modules
 yarn-error.log
 .env
+old/index copy.js
+old/twitter copy.js
+old/routes.js
