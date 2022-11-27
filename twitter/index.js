@@ -3,7 +3,7 @@ import { client } from "./config.js";
 class Twitter {
   tweetID = "20";
 
-  async hello() {
+  hello() {
     console.log("hello");
   }
 
