@@ -1,7 +1,7 @@
 import { client } from "./config.js";
 
 class Twitter {
-  tweetID = "20";
+  #tweetID = "20";
 
   hello() {
     console.log("hello");
@@ -32,12 +32,12 @@ class Twitter {
   async retweet() {
     const userID = await this.user_info();
 
-    const data = await client.v2.retweet(userID, this.tweetID);
+    const data = await client.v2.retweet(userID, this.#tweetID);
     return data;
   }
 
   async get_a_tweet() {
-    const data = await client.v2.singleTweet(this.tweetID);
+    const data = await client.v2.singleTweet(this.#tweetID);
     return data;
   }
 }
